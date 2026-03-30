@@ -21,4 +21,4 @@ Each problem has its own file with the following comment format at the top:
 
 ```cpp
 // Problem: Two Sum
-// Platform: LeetCode
+// Platform: Codeforces
