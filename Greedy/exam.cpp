@@ -8,9 +8,7 @@
     cin.tie(0), cout.tie(0);
 using namespace std;
 void ma7adesh_hayesma3ak_tool_ma_enta_da3eef()
-{ 
-    // codeforces problem
-    // rate 1400
+{
     int n;
     cin >> n;
     vector<pair<ll, ll>> a(n);
