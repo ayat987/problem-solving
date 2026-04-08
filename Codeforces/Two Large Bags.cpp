@@ -15,31 +15,6 @@ using namespace std;
 const ll N = 5005;
 ll dp[N];
 void accepted() {
-    int n; cin >> n;
-    vector<ll>v(n),vv;
-    map<ll, ll>mp;
-    for (int i = 0; i < n; i++) {
-        cin >> v[i];
-        mp[v[i]]++;
-    }
-    int r = 0;
-    for (int i = 0; i <1005 ; i++) {
-        if (mp[i] == 0)continue;
-        if (mp[i] == 1) {
-            cout << "No\n";
-            r = 1;
-            break;
-        }
-        else {
-            if (mp[i] > 2) {
-                ll rem = mp[i] - 2;
-                mp[i + 1] += rem;
-            }
-        }
-    }
-    if (r == 0) {
-      cout << "Yes\n";
-    }
 }
 int main() {
     if (fopen("in.txt", "r")) {
@@ -49,7 +24,7 @@ int main() {
     ////////////////////////////////////////
     SIMBA_
         int tt = 1;
-    cin >> tt;
+    //cin >> tt;
     while (tt--) {
         accepted();
     }
