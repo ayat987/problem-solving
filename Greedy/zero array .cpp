@@ -8,7 +8,27 @@
     cin.tie(0), cout.tie(0);
 using namespace std;
 void ma7adesh_hayesma3ak_tool_ma_enta_da3eef(){
-    
+     // codeforces problem
+    //  the name of prolem is the name of the file
+    //  rate :1500
+    int n;
+    cin >> n;
+    vector<ll>v(n);
+    for (int i = 0; i < n;i++){
+        cin >> v[i];
+    }
+    ll sum = 0;
+    ll mx = 0;
+    for (int i = 0; i < n;i++){
+        sum += v[i];
+        mx = max(mx, v[i]);
+    }
+   if((sum%2==0)&&(mx<=(sum-mx))){
+       cout << "YES\n";
+   }
+   else{
+       cout << "NO\n";
+   }
 }
 int main()
 {
