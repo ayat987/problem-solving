@@ -8,6 +8,9 @@
     cin.tie(0), cout.tie(0);
 using namespace std;
 void ma7adesh_hayesma3ak_tool_ma_enta_da3eef(){
+     // codeforces problem
+    //  the name of prolem is the name of the file
+    //  rate :1500
     string s;
     cin >> s;
     ll n = s.size();
