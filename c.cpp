@@ -8,39 +8,7 @@
     cin.tie(0), cout.tie(0);
 using namespace std;
 void ma7adesh_hayesma3ak_tool_ma_enta_da3eef(){
-    string s;
-    cin >> s;
-    ll n = s.size();
-    map<char, ll> mp;
-    for (int i = 0; i < n;i++){
-        mp[s[i]]++;
-    }
-    ll mx1 = 0;
-    for(auto i:mp){
-        mx1 = max(mx1, i.second);
-    }
-    ll ans = 1e10;
-    for (int i = 0; i < 10;i++){
-        for (int j = 0; j < 10;j++){
-            ll last = -1;  ll cnt = 0;
-            for(auto c:s){
-                ll x = c - '0';
-                if(x==i||x==j){
-                    if(last==-1||last!=x){
-                        cnt++;
-                        last = x;
-                    }
-                }
-            }
-        if(cnt&1){
-           cnt--;
-        }
-        ans = min(ans, (n - cnt));
-        }
-        
-    }
-    //cout << ans << '\n';
-    cout << min((n - mx1),abs(ans)) << '\n';
+   
 }
 int main()
 {
