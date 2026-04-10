@@ -8,7 +8,38 @@
     cin.tie(0), cout.tie(0);
 using namespace std;
 void ma7adesh_hayesma3ak_tool_ma_enta_da3eef(){
-   
+     // codeforces problem
+    //  the name of prolem is the name of the file
+    //  rate :1500
+    int n;
+    cin >> n;
+    vector<ll> v(n);
+    for (int i = 0; i < n;i++){
+        cin >> v[i];
+    }
+    ll total = v[0];
+    for (int i = 1; i < n; i++){
+        total ^= v[i];
+    }
+    if(total==0){
+        cout << "YES\n";
+    }
+    else{
+        ll x = 0, cnt = 0;
+        for (int i = 0; i < n;i++){
+            x ^= v[i];
+            if(x==total){
+                x = 0;
+                cnt++;
+            }
+        }
+        if(cnt>=2){
+            cout << "YES\n";
+        }
+        else{
+            cout << "NO\n";
+        }
+    }
 }
 int main()
 {
