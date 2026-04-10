@@ -19,7 +19,7 @@ int main()
         freopen("out.txt", "w", stdout);
     }
     int t_ = 1;
-    cin >> t_;
+    //cin >> t_;
     for (int i_ = 0; i_ < t_; i_++)
     {
         ma7adesh_hayesma3ak_tool_ma_enta_da3eef();
