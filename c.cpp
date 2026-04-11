@@ -7,7 +7,7 @@
     ios_base::sync_with_stdio(0); \
     cin.tie(0), cout.tie(0);
 using namespace std;
-void ma7adesh_hayesma3ak_tool_ma_enta_da3eef(){
+void SIMBA(){
     
 }
 int main()
@@ -22,6 +22,6 @@ int main()
     //cin >> t_;
     for (int i_ = 0; i_ < t_; i_++)
     {
-        ma7adesh_hayesma3ak_tool_ma_enta_da3eef();
+        SIMBA();
     }
 }
