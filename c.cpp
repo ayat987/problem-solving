@@ -7,6 +7,10 @@
     ios_base::sync_with_stdio(0); \
     cin.tie(0), cout.tie(0);
 using namespace std;
+/*
+5 2
+1 2 15 15 15
+*/
 void SIMBA(){
     
 }
