@@ -12,7 +12,7 @@ using namespace std;
 1 2 15 15 15
 */
 void SIMBA(){
-    
+    cout << gcd(12, 18) << " " << lcm(12, 18);
 }
 int main()
 {
