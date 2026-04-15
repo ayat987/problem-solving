@@ -6,7 +6,7 @@
 #define SIMBA_  ios_base::sync_with_stdio(0);cin.tie(0), cout.tie(0);
 using namespace std;
 const ll N=105;
-ll dp[N][N];
+ll dp[N];
 /*
  n =2
  5 10
@@ -15,34 +15,30 @@ solution :((5+10)*10)+(100+10)*20)= 2350
 solution : (5+100+10)*20=2300 min
 */
 void SIMBA() {
+    // push parameter to loop (new trick)
+    //  update in memort o(n) not o(n*n)
    int n; cin>>n;
     vector<ll>c(n),q(n);
     for (int i=0;i<n;i++) {
         cin>>c[i]>>q[i];
     }
     memset(dp,-1,sizeof dp);
-    // prefix inferenced variable -> مبحطوش في البرامتر بتاع ال dp
-    function<ll(ll,ll,ll)>clc=[&](ll cur,ll lst,ll prefix) {
+    function<ll(ll)>clc=[&](ll cur) {
         if (cur==n) {
-            if (cur!=lst) {
-                return (ll)2e18;
-            }
             return 0ll;
         }
-        ll &ret=dp[cur][lst];
+        ll &ret=dp[cur];
         if (~ret) {
             return ret;
         }
-        ret=2e18;
-        // Enough
-        ret=min(ret,clc(cur+1,cur+1,0)+(10+prefix+c[cur])*q[cur]);
-        //complete
-        if (cur+1<n) {
-            ret=clc(cur+1,lst,prefix+c[cur]);
+        ret=2e18; ll sum=0;
+        for (int j =cur; j < n; ++j) {
+            sum += c[j];
+            ret = min(ret, (sum + 10) * q[j] + clc(j + 1));
         }
         return ret;
     };
-    cout<<clc(0,0,0);
+    cout<<clc(0);
 }
 int main() {
     SIMBA_
